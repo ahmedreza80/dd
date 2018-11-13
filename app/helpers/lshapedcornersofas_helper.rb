@@ -1,0 +1,2 @@
+module LshapedcornersofasHelper
+end

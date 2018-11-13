@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+<link rel="stylesheet" href="/assets/interior.css">
+
+
+<div class="section-header" style="height:400px;">
+        <div class="row">
+            <div class="col-md-7 d-none d-md-block">
+                <div class="texts">
+                    <div class="text7">
+                        <h1 style="font-size: 48px;">Thanks!</h1>
+                    </div>
+
+                    <div class="text8">
+                        <p class="h4" style="font-size: 32px;">We have recived your request and one of us will contact you shortly.</p>
+                    </div>
+                    <%= link_to 'Edit', edit_interior_path(@interior), class: "btn btn-primary" %> |
+<%= link_to 'Back', interiors_path, class: "btn btn-success" %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<style>
+.text7 {
+    font-family: 'Dancing Script', cursive;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-30%, -30%);
+    color: white;
+    padding-top: 90px;
+
+}
+.text8 {
+    font-family: 'Dancing Script', cursive;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-30%, -30%);
+    color: white;
+    padding-top: 180px;
+
+}
+</style>

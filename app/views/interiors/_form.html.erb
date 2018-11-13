@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+            <div class="col-md-1"></div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <link rel="stylesheet" href="/assets/interior.css">
+
+  </head>
+  <body>
+
+    <div class="section-header">
+        <div class="row">
+            <div class="col-md-7 d-none d-md-block">
+                <div class="texts">
+                    <div class="text1">
+                        <h1>DennyDots</h1>
+                    </div>
+
+                    <div class="text2">
+                        <p class="h4">Co-ordinates, Plans, Researches, and Craft your dream home as you love.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-transparent py-5">
+                    <p class="h1 text-center">Book A Expert</p>
+                    <%= form_with(model: interior, local: true) do |form| %>
+                    <div class="form-group">
+                        <%= form.text_field :name, id: :interior_name , placeholder: "Your Full Name"%>
+                    </div>
+
+                    <div class="form-group">
+                            <%= form.text_field :email, id: :interior_email, placeholder: "Your Email" %>
+                    </div>
+
+                    <div class="form-group">
+                            <%= form.text_field :mobile, id: :interior_mobile, placeholder: "Your Mobile Number" %>
+                    </div>
+
+                    <div class="form-group">
+                            <%= form.text_field :city, id: :interior_city, placeholder: "Your City Where you want the servic" %>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+                    <div class="captcha">
+                        <%= form.submit "Submit Request", class: "button" %>
+                    </div>
+
+                    <% end %>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section-work">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="text-overlay">
+                    <img src="/assets/handshake.png" alt="A" class="img-fluid" style="height:150px; width:150px;">
+                    <div class="text">
+                        <h4>Meeting:</h4>
+                        <p class="h5">After your request one of us will contact you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="text-overlay">
+                    <img src="/assets/meeting.png" alt="B" class="img-fluid" style="height:150px; width:150px;">
+                    <div class="text">
+                        <h4>Sharing Views:</h4>
+                        <p class="h5">If all goes well, we will discuss designs with you.</p>
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-md-3">
+                    <div class="text-overlay">
+                        <img src="/assets/progress.png" alt="C" class="img-fluid" style="height:150px; width:150px;">
+                        <div class="text">
+                            <h4>Work in Progress:</h4>
+                            <p class="h5">As soon as you get your design, we will start working.</p>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="col-md-3">
+                        <div class="text-overlay">
+                            <img src="/assets/satisfaction.png" alt="D" class="img-fluid" style="height:150px; width:150px;">
+                            <div class="text">
+                                <h4>Satisfaction:</h4>
+                                <p class="h5">At the end we will leave you with satisfaction.</p>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+
+    <div class="section-text-work mt-4">
+        <h1 class="text-center large-text">
+            Design Free*
+        </h1>
+        <p class="text-center">*Conditions Apply</p>
+
+        <p class="h3 text-center my-5"><span class="h1">DennyDots</span>
+        India&apos;s first Custom furniture solution at your reach.
+        </p>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    
+  </body>
+</html>

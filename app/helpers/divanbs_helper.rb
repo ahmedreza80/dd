@@ -1,0 +1,2 @@
+module DivanbsHelper
+end

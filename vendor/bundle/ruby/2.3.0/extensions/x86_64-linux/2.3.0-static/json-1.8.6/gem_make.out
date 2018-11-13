@@ -1,0 +1,13 @@
+current directory: /home/ahmed/ddv/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+/home/ahmed/.rbenv/versions/2.3.3/bin/ruby -r ./siteconf20180912-15607-1vd8bdk.rb extconf.rb
+creating Makefile
+
+current directory: /home/ahmed/ddv/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/ahmed/ddv/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /home/ahmed/ddv/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" install

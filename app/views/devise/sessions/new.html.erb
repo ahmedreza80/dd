@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/login.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+  <div class="login-content">
+    <h3 class="text-center head-title">Sign In to your account</h3>
+    <hr>
+    <p class="text-center">You've got an Denny Dots account, please Sign in to continue. <br>
+      Don't have one? <span><a href="/users/sign_up">Create an account</a></span></p>
+        <div class="container d-flex justify-content-center py-4">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+            <div class="form-group">
+              <div class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <%= f.email_field :email, autofocus: true, placeholder: "Enter Email", autocomplete: "email" %>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-control" id="exampleInputPassword1">
+                <%= f.password_field :password, placeholder: "Password*", autocomplete: "off" %>
+              </div>
+            </div>
+            <%= f.submit "Log In", class: "btn" %>
+            <a href="/users/password/new">forgotten your password?</a>
+            <% end %>
+        </div>
+  </div>
+</div>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

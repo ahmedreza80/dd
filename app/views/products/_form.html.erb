@@ -1,0 +1,128 @@
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :product_title %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.select :category, ['Bench', 'Bed Side Table', 'Book Cabinet', 'Chair', 'Tv Cabinet', 'Center Table', 'Side Table', 'Spot Table', 'Writing Table', 'Fabricated Sofa Set', 'Wooden Sofa Set', 'One Seater Sofa', 'Two Seater Sofa', 'Three Seater Sofa', 'L Shaped Sofa', 'Dining Table', 'Kitchen Cabinets', 'Queen Size Bed', 'King Size Bed', 'Single Bed', 'Double Bed', 'Storage Bed', 'Upholstered Bed', 'Sofa Cum Bed', 'Divan Bed', 'Kids Bed', 'Wardrobe', 'Dressing Table', 'Kids Study Table', 'Kids Wardrobe' ] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :product_description %>
+  </div>
+
+ <div class="field">
+    <%= form.label :sdescription %><br>
+    <%= form.text_area :sdescription %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %><br>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :previewo %><br>
+    <%= form.file_field :previewo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :previewt %><br>
+    <%= form.file_field :previewt %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :previewth %><br>
+    <%= form.file_field :previewth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price, id: :product_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :offerprice %>
+    <%= form.number_field :offerprice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coupon %>
+    <%= form.text_field :coupon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :warrenty %>
+    <%= form.text_field :warrenty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :material %>
+    <%= form.text_field :material %>
+  </div>
+
+  <div class="field">
+    <%= form.label :saving %>
+    <%= form.text_field :saving %>
+  </div>
+
+  <div class="field">
+    <%= form.label :off %>
+    <%= form.text_field :off %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dimension %>
+    <%= form.text_field :dimension %>
+  </div>
+
+  <div class="field">
+    <%= form.label :height %>
+    <%= form.text_field :height %>
+  </div>
+
+  <div class="field">
+    <%= form.label :width %>
+    <%= form.text_field :width %>
+  </div>
+
+  <div class="field">
+    <%= form.label :depth %>
+    <%= form.text_field :depth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deliveryd %>
+    <%= form.text_field :deliveryd %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

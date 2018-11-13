@@ -1,0 +1,13 @@
+current directory: /home/zia/Desktop/ddv/vendor/bundle/ruby/2.5.0/gems/json-1.8.6/ext/json
+/usr/bin/ruby2.5 -r ./siteconf20180927-6752-fud0yh.rb extconf.rb
+creating Makefile
+
+current directory: /home/zia/Desktop/ddv/vendor/bundle/ruby/2.5.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/zia/Desktop/ddv/vendor/bundle/ruby/2.5.0/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /home/zia/Desktop/ddv/vendor/bundle/ruby/2.5.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" install

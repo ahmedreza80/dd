@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wood: 
+  polish: 
+  cimage: 
+  dimension: 
+  info: 
+  name: 
+  email: 
+  phone: 
+  city: MyString
+
+two:
+  wood: 
+  polish: 
+  cimage: 
+  dimension: 
+  info: 
+  name: 
+  email: 
+  phone: 
+  city: MyString

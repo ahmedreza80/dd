@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Customs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Wood</th>
+      <th>Polish</th>
+      <th>Cimage</th>
+      <th>Dimension</th>
+      <th>Info</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>City</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customs.each do |custom| %>
+      <tr>
+        <td><%= custom.wood %></td>
+        <td><%= custom.polish %></td>
+        <td><%= custom.cimage %></td>
+        <td><%= custom.dimension %></td>
+        <td><%= custom.info %></td>
+        <td><%= custom.name %></td>
+        <td><%= custom.email %></td>
+        <td><%= custom.phone %></td>
+        <td><%= custom.city %></td>
+        <td><%= link_to 'Show', custom %></td>
+        <td><%= link_to 'Edit', edit_custom_path(custom) %></td>
+        <td><%= link_to 'Destroy', custom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Custom', new_custom_path %>

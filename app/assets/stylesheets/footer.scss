@@ -1,0 +1,81 @@
+
+/*
+
+gold:   #FFD700;
+orange: #FFA500;
+goldenrod:  #DAA520;
+
+
+
+*/
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
+
+body{
+
+    font-family: 'Raleway';
+    font-weight: 400;
+}
+
+
+
+
+footer{
+  background-color: #000;
+  color: #fff;
+  padding-bottom: 50px;
+}
+
+footer .col{
+  margin-top: 50px;
+  padding: 15px 0;
+}
+
+footer h5{
+  font-size: 18px;
+}
+
+footer .nav-link{
+  margin-left: -15px;
+  color: #fff;
+  line-height: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  transition: all 0.3s;
+}
+
+footer .nav-link:hover{
+  margin-left: 5px;
+  color: #FFD700;
+}
+
+footer .newsletter{
+  color: #fff;
+}
+
+footer .fa{
+  font-size: 28px;
+  margin-right: 15px;
+}
+
+footer .fa-facebook-square{
+  color: #3b5998;
+}
+
+footer .fa-instagram{
+  color: #fb3958;
+}
+
+footer .footer-hr{
+  width: 75vw;
+  border: 1px solid #ccc;
+}
+
+footer .copyright{
+  font-weight: lighter;
+  font-style: normal;
+
+}

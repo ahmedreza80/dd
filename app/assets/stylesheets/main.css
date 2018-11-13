@@ -1,0 +1,47 @@
+
+h1, p {
+    color: #646464;
+}
+
+.section-title h1 {
+    color: #ff8c00;
+}
+
+.section-main h3, h5 {
+    color: #ff8c00;
+}
+
+hr {
+    width: 300px;
+    border-bottom: 1px solid #ff8c00;
+}
+
+.section-main .list-group-item p {
+    font-size: 16px;
+
+}
+
+
+.section-main .fa {
+    margin: 10px;
+    font-size: 40px;
+}
+
+.fa-whatsapp {
+    color: #25D366;
+    transition: all 0.2s;
+}
+
+.fa-whatsapp:hover {
+    color: rgb(57, 192, 106);
+}
+
+.fa-instagram {
+    color: #fb3958;
+    transition: all 0.2s;
+}
+
+.fa-instagram:hover {
+    color: #f8183d;
+}
+

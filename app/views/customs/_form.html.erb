@@ -1,0 +1,128 @@
+<%= form_with(model: custom, local: true) do |form| %>
+  <% if custom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(custom.errors.count, "error") %> prohibited this custom from being saved:</h2>
+
+      <ul>
+      <% custom.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="well">
+
+              <h5 class="modal-title text-center" id="exampleModalLongTitle">Customize It . The Way You Want to !!!!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col col-md-8 col-sm-12">
+                    
+                      <div class="row">
+                        <div class="col col-md-6 col-sm-12">
+                          <div class="py-2">
+                          <label for="Polish">Wood</label>
+                          
+                        
+    <%= form.select :wood, ['option1', 'option2', 'option3']%>
+                        </div>
+
+                        <div class="py-4">
+                      <div class="form-group">
+                        <label for="exampleFormControlFile1">Choose a Photo or a Sketch</label>
+                        <%= form.file_field :cimage %>
+                      </div>
+                    </div>
+                        </div>
+                        <div class="col col-md-6 col-sm-12">
+                          <div class="py-2">
+                          <label for="Polish">Polish</label>
+                          <%= form.select :polish, ['option1', 'option2', 'option3']%>
+                        </div>
+
+                        <div class="py-4">
+                        <div class="form-group">
+                        <label for="exampleInputEmail1">Dimensions</label>
+                        <%= form.text_field :dimension, id: :custom_dimension %>
+                      </div>
+                      </div>
+
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Ask us any questions, or tell us about your inspiration</label>
+                      <br>
+                      <%= form.text_area :info, id: :custom_info %>
+                    </div>
+
+                    <div class="row">
+                      <div class="col col-md-6 col-sm-12">
+                        <div class="py-2">
+                          <div class="form-group">
+                          <label for="exampleFormControlInput1">Name*</label>
+                          <%= form.text_field :name, id: :custom_name %>
+                        </div>
+                      </div>
+
+                      <div class="py-4">
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Phone No*</label>
+                      <%= form.text_field :phone, id: :custom_phone %>
+                    </div>
+                  </div>
+                      </div>
+                      <div class="col col-md-6 col-sm-12">
+                        <div class="py-2">
+                          <div class="form-group">
+                          <label for="exampleFormControlInput1">Email address*</label>
+                          <%= form.text_field :email, id: :custom_email %>
+                        </div>
+                      </div>
+
+                      <div class="py-4">
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">City*</label>
+                        <%= form.text_field :city, id: :custom_city %>
+                    </div>
+                    </div>
+
+                      </div>
+                    </div>
+
+                    </div>
+
+                    <div class="d-none d-md-block col col-md-4">
+
+                    
+                      <div class="tag-head py-4 mt-5">
+                        <h3 class="lead text-warning">Design Your Furniture</h3>
+                        <p class="lead">Share your design idea & our experts will get back with the best possible custom made suggestions</p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn" data-dismiss="modal">Close</button>
+              <%= form.submit "Submit Request", class: "button" %>
+            </div>
+
+<% end %>
+</div>

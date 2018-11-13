@@ -1,0 +1,2 @@
+module OneseatersofasHelper
+end

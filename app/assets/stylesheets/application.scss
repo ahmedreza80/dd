@@ -1,0 +1,50 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+ @import "bootstrap";
+
+.linky{
+  color: #fff;
+  font-size: 20px;
+}
+
+.linky:hover {
+    color: yellow;
+}
+
+/* selected link */
+.linky:active {
+    color: #fff;
+}
+
+
+.razorpay-payment-button {
+    background-color: #e96a19;
+    color: #fff;
+    border-radius: 0;
+    margin-left: 150px;
+    padding: 10px 80px;
+}
+
+.strike {
+    position: relative;
+    display: inline-block;
+}
+.strike::before {
+    content: '';
+    border-bottom: 2px solid red;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
