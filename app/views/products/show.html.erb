@@ -84,8 +84,13 @@
             <div class="delivery my-2 d-flex justify-content-between">
               <p class="h3">Delivery</p>
               <div class="pincode">
-              <input type="text" name="Enter Pincode" placeholder="  Pincode">
-              <button type="submit" class="btn">Submit</button>
+              <form method="post" action="" name="english_registration_form" id="english_registration_form">
+    <input type="text" id="name" name="name" aria-describedby="name-format" placeholder="Check your pincode"> <span class="error"><p id="name_error"></p></span>
+
+
+
+    <button class="register_button" type="submit" value="submit">Check Avaliablity</button>
+</form>
               </div>
             </div>
             <hr>
@@ -328,7 +333,7 @@ Contact DENNY DOTS <a href="/welcome/contact">Customer Care</a>. You will find t
 
           <div class="container-fluid bg-cover">
             <div class="container product-section-cover">
-              
+              <%= render partial: 'products/chair' %>
           </div>
         </div>
   </div>
@@ -356,7 +361,35 @@ Contact DENNY DOTS <a href="/welcome/contact">Customer Care</a>. You will find t
 
 
 
+<script>
+document.getElementById("english_registration_form").onsubmit = function () {
+    var x = document.forms["english_registration_form"]["name"].value ;
 
+    var submit = false;
+
+
+    if (x == "700001" || x == "700002" || x == "700003" || x == "700004" || x == "700005" || x == "700006" || x == "700007" || x == "700008" || x == "700009" || x == "700010" || x == "700011" || x == "700012" || x == "700013" || x == "700014" || x == "700015" || x == "700016" || x == "700017" || x == "700018" || x == "700019" || x == "700020" || x == "700021" || x == "700022" || x == "700023" || x == "700024" || x == "700025" || x == "700026" || x == "700027" || x == "700028" || x == "700029" || x == "700030" || x == "700031" || x == "700032" || x == "700033" || x == "700034" || x == "700035" || x == "700036" || x == "700037" || x == "700038" || x == "700039" || x == "700040" || x == "700041" || x == "700042" || x == "700043" || x == "700044" || x == "700045" || x == "700046" || x == "700047" || x == "700048" || x == "700049" || x == "700050" || x == "700051" || x == "700052" || x == "700053" || x == "700054" || x == "700055" || x == "700056" || x == "700057" || x == "700058" || x == "700059" || x == "700060" || x == "700061" || x == "700062" || x == "700063" || x == "700064" || x == "700065" || x == "700066" || x == "700067" || x == "700068" || x == "700069" || x == "700070" || x == "700072" || x == "700073" || x == "700074" || x == "700075" || x == "700076" || x == "700077" || x == "700078" || x == "700079" || x == "700080" || x == "700081" || x == "700082" || x == "700083" || x == "700084" || x == "700085" || x == "700086" || x == "700087" || x == "700088" || x == "700089" || x == "700090" || x == "700091" || x == "700092" || x == "700093" || x == "700094" || x == "700095" || x == "700096" || x == "700097" || x == "700098" || x == "700099" || x == "700099" || x == "700100" || x == "700101" || x == "700102" || x == "700103" || x == "700104" || x == "700105" || x == "700106" || x == "700107" || x == "700108" || x == "700109" || x == "700110" || x == "700111" || x == "700112" || x == "700113" || x == "700114" || x == "700115" || x == "700116" || x == "700117" || x == "700118" || x == "700119" || x == "700120" || x == "700121" || x == "700122" || x == "700123" || x == "700124" || x == "700125" || x == "700126" || x == "700127" || x == "700128" || x == "700129" || x == "700130" || x == "700131" || x == "700132" || x == "700133" || x == "700134" || x == "700135" || x == "700136" || x == "700137" || x == "700138" || x == "700139" || x == "700140" || x == "700141" || x == "700142" || x == "700143" || x == "700144" || x == "700145" || x == "700146" || x == "700147" || x == "700148" || x == "700149" || x == "700150" || x == "700151" || x == "700152" || x == "700153" || x == "700154" || x == "700155" || x == "700156" || x == "700157" || x == "700158" || x == "700159" || x == "700160" || x == "700161" ) {
+        nameError = "Delivery is avaliable in your area.";
+        document.getElementById("name_error").innerHTML = nameError;
+        submit = false;
+    }
+
+    else {
+      nameError = "We are not in your area right now, but you can book a special delivery by contacting us.";
+        document.getElementById("name_error").innerHTML = nameError;
+        submit = false;
+    }
+
+    return submit;
+}
+
+function removeWarning() {
+    document.getElementById(this.id + "_error").innerHTML = "";
+}
+
+document.getElementById("name").onkeyup = removeWarning;
+
+</script>
 
 
 </body>

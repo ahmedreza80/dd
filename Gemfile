@@ -20,6 +20,8 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'rails_admin', '~> 1.3'
 gem 'jquery-rails'
 gem 'carrierwave', '~> 0.10.0'
+gem 'omniauth-facebook', '~> 4.0'
+gem 'omniauth-google-oauth2', '~> 0.4.1'
 
 gem 'mini_magick', '~> 4.3'
 gem 'devise'
@@ -60,6 +62,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'dotenv', '~> 2.2.1'
   gem 'sqlite3'
   
 end

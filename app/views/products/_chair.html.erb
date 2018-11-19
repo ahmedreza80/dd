@@ -1,0 +1,58 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/assets/chairs.scss">
+</head>
+
+<body>
+
+
+
+  <main>
+
+
+
+
+    <div class="container-fluid bg-cover">
+      <div class="container product-section-cover">
+
+        <div class="row">
+
+
+          <% @products.each do |product| %>
+              <% if product.category == "Chair" %>
+              <div class="col col-md-4 col-sm-6">
+              <div class="product-grid">
+                <div class="image">
+                    <img src= "<%= product.image %>" alt="<%= product.title %> 's image" class="img-fluid">
+                    <span class="overlay">
+                        <span class="product-details">
+                           <%= link_to "View Details", product, class: "linky" %>
+
+                        </span>
+                    </span>
+                </div>
+                <div class="product-discription py-3">
+                <h4 class="text-center"><%= product.title %></h4>
+                <p class="text-center"><small><%= product.sdescription %></small></p>
+                <span class="product-price">
+                <p class="text-center d-inline strike" >Price: <%= product.price %></p><i class="fa fa-heart d-inline" aria-hidden="true"></i>
+                Offer Price: <%= product.offerprice %>
+                </span>
+                </div>
+                <div class="product-btn py-2 text-center">
+                <%= link_to "Add To Cart", product, class: "btn btn-lg" %>
+                </div>
+              </div>
+          </div>
+
+          <% end %>
+          <% end %>
+
+      </div>
+    </div>
+
+
+  </main>
+
+</body>
