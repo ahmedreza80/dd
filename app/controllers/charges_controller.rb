@@ -1,4 +1,5 @@
 class ChargesController < ApplicationController
+	  protect_from_forgery with: :null_session
 	@@email = 0
 	@@amount = 0
 
