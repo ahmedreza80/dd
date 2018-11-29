@@ -136,6 +136,15 @@
                                                           <%= f.text_field :pincode, autofocus: true, placeholder: "Pincode" %>
                                                         </div>
                                                     </div>
+
+                                                    <div class="trackit" style="display: none;">
+                                                    <div class="form-group">
+                                                            <div class="d-flex justify-content-between">
+                                                          <label for="exampleFormControlInput1">Tracking</label>
+                                                          <%= f.select :tracking, ['Order Recived', 'Preparing Order', 'Out for delivery', 'Shipment Completed'  ] %>
+                                                        </div>
+                                                    </div>
+                                                  </div>
 <input type="hidden" id="paid_amount" name="paid_amount[amount]" value="" />
                                                         
                                                               <%= f.submit "Save & Continue", class: "btn" %>
