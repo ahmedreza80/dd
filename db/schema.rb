@@ -86,6 +86,9 @@ ActiveRecord::Schema.define(version: 20181119195157) do
     t.string "pincode"
     t.string "delivery_address"
     t.string "tracking"
+    t.string "bcity"
+    t.string "bpincode"
+    t.string "bdelivery_address"
     t.decimal "sub_total", precision: 15, scale: 2, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

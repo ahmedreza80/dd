@@ -119,21 +119,27 @@
                                                         <div class="form-group">
                                                                 <div class="d-flex justify-content-between">
                                                           <label for="exampleFormControlTextarea1">Address</label>
-                                                          <%= f.text_field :delivery_address, autofocus: true, placeholder: "Complete Delivery Addresss" %>
+                                                          <div name="shippingadd">
+                                                          <%= f.text_field :delivery_address, autofocus: true, placeholder: "Complete Delivery Addresss", name: "shippingadd" %>
                                                         </div>
+                                                      </div>
                                                         </div>
 
                                                         <div class="form-group">
                                                             <div class="d-flex justify-content-between">
                                                           <label for="exampleFormControlInput1">City</label>
-                                                          <%= f.text_field :city, autofocus: true, placeholder: "Delivery City" %>
+                                                          <div name="shippingcity">
+                                                          <%= f.text_field :city, autofocus: true, placeholder: "Delivery City", name: "shippingcity" %>
+                                                        </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group">
                                                             <div class="d-flex justify-content-between">
                                                           <label for="exampleFormControlInput1">Pincode</label>
-                                                          <%= f.text_field :pincode, autofocus: true, placeholder: "Pincode" %>
+                                                          <div name="shippingpin">
+                                                          <%= f.text_field :pincode, autofocus: true, placeholder: "Pincode", name: "shippingpin" %>
+                                                        </div>
                                                         </div>
                                                     </div>
 
@@ -146,6 +152,51 @@
                                                     </div>
                                                   </div>
 <input type="hidden" id="paid_amount" name="paid_amount[amount]" value="" />
+
+<input type="checkbox" name="billingtoo" onclick="FillBilling(this.form)">
+<em>Check this box if Billing Address and Mailing Address are the same.</em>
+
+<h3><b>Billing Details:</b></h3>
+
+<div class="form-group">
+                                                                <div class="d-flex justify-content-between">
+                                                          <label for="exampleFormControlTextarea1">Billing Address</label>
+                                                          <div name="billingadd">
+                                                          <%= f.text_field :bdelivery_address, autofocus: true, placeholder: "Complete Billing Addresss", name: "billingadd" %>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <div class="d-flex justify-content-between">
+                                                          <label for="exampleFormControlInput1">Billing City</label>
+                                                          <div name="billingcity">
+                                                          <%= f.text_field :bcity, autofocus: true, placeholder: "Billing City", name: "billingcity" %>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                            <div class="d-flex justify-content-between">
+                                                          <label for="exampleFormControlInput1">Billing Pincode</label>
+                                                          <div name="billingpin">
+                                                          <%= f.text_field :bpincode, autofocus: true, placeholder: "Billing Pincode", name: "billingpin" %>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+<script>
+function FillBilling(f) {
+  if(f.billingtoo.checked == true) {
+    f.billingadd.value = f.shippingadd.value;
+    f.billingpin.value = f.shippingpin.value;
+    f.billingcity.value = f.shippingcity.value;
+  }
+}
+</script>
                                                         
                                                               <%= f.submit "Save & Continue", class: "btn" %>
                                                               <% end %>
