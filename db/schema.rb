@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181119195157) do
+ActiveRecord::Schema.define(version: 20181201112639) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -86,15 +86,15 @@ ActiveRecord::Schema.define(version: 20181119195157) do
     t.string "pincode"
     t.string "delivery_address"
     t.string "tracking"
-    t.string "bcity"
-    t.string "bpincode"
-    t.string "bdelivery_address"
     t.decimal "sub_total", precision: 15, scale: 2, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "order_id"
     t.string "token"
     t.string "status", default: "cart"
+    t.string "bcity"
+    t.string "bpincode"
+    t.string "bdelivery_address"
     t.index ["order_id"], name: "index_orders_on_order_id"
   end
 
