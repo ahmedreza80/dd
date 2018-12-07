@@ -47,6 +47,9 @@ class WelcomeController < ApplicationController
   def kst
     @products = Product.all
   end
+  def stb
+    @products = Product.all
+  end
   def kw
     @products = Product.all
   end

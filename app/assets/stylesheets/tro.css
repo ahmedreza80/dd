@@ -81,11 +81,26 @@ span.line {
 	float:left;
 	margin-left:5%;
 }
-.confirm .imgcircle , .process .imgcircle, .quality .imgcircle {
+.confirm .imgcircle {
 	background-color:#98D091;
 }
-.confirm span.line, .process span.line {
+.process .imgcircle {
+	background-color:#F5998E;
+}
+.quality .imgcircle {
+	background-color:#F5998E;
+}
+
+
+
+.confirm span.line {
 	background-color:#98D091; 
+}
+
+
+
+.process span.line {
+	background-color:#F5998E; 
 }
 .content3 p {
 	margin-left:-50%;

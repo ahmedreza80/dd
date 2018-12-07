@@ -15,114 +15,104 @@
 
 
 
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="/assets/customs.css">
+
+    
+
+  
 
 
-<!-- Modal -->
-<div class="well">
+<div class="break">
 
-              <h5 class="modal-title text-center" id="exampleModalLongTitle">Customize It . The Way You Want to !!!!</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col col-md-8 col-sm-12">
-                    
-                      <div class="row">
-                        <div class="col col-md-6 col-sm-12">
-                          <div class="py-2">
-                          <label for="Polish">Wood</label>
-                          
-                        
-    <%= form.select :wood, ['option1', 'option2', 'option3']%>
-                        </div>
+  
+<div class="containero">
+  <form>
+    <div class="row">
+      <h4>Customize It . The Way You Want to!!</h4>
+      <div class="input-group input-group-icon">
+        <%= form.text_field :name, id: :custom_name, placeholder: "Full Name" %>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <%= form.text_field :email, id: :custom_email, placeholder: "Email Address" %>
+        <div class="input-icon"><i class="fa fa-envelope"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <%= form.text_field :phone, id: :custom_phone, placeholder: "Mobile Number" %>
+        <div class="input-icon"><i class="fa fa-phone"></i></div>
+      </div>
 
-                        <div class="py-4">
-                      <div class="form-group">
-                        <label for="exampleFormControlFile1">Choose a Photo or a Sketch</label>
-                        <%= form.file_field :cimage %>
-                      </div>
-                    </div>
-                        </div>
-                        <div class="col col-md-6 col-sm-12">
-                          <div class="py-2">
-                          <label for="Polish">Polish</label>
-                          <%= form.select :polish, ['option1', 'option2', 'option3']%>
-                        </div>
-
-                        <div class="py-4">
-                        <div class="form-group">
-                        <label for="exampleInputEmail1">Dimensions</label>
-                        <%= form.text_field :dimension, id: :custom_dimension %>
-                      </div>
-                      </div>
-
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                      <label for="exampleFormControlTextarea1">Ask us any questions, or tell us about your inspiration</label>
-                      <br>
-                      <%= form.text_area :info, id: :custom_info %>
-                    </div>
-
-                    <div class="row">
-                      <div class="col col-md-6 col-sm-12">
-                        <div class="py-2">
-                          <div class="form-group">
-                          <label for="exampleFormControlInput1">Name*</label>
-                          <%= form.text_field :name, id: :custom_name %>
-                        </div>
-                      </div>
-
-                      <div class="py-4">
-                    <div class="form-group">
-                      <label for="exampleFormControlInput1">Phone No*</label>
-                      <%= form.text_field :phone, id: :custom_phone %>
-                    </div>
-                  </div>
-                      </div>
-                      <div class="col col-md-6 col-sm-12">
-                        <div class="py-2">
-                          <div class="form-group">
-                          <label for="exampleFormControlInput1">Email address*</label>
-                          <%= form.text_field :email, id: :custom_email %>
-                        </div>
-                      </div>
-
-                      <div class="py-4">
-                      <div class="form-group">
-                        <label for="exampleFormControlInput1">City*</label>
-                        <%= form.text_field :city, id: :custom_city %>
-                    </div>
-                    </div>
-
-                      </div>
-                    </div>
-
-                    </div>
-
-                    <div class="d-none d-md-block col col-md-4">
-
-                    
-                      <div class="tag-head py-4 mt-5">
-                        <h3 class="lead text-warning">Design Your Furniture</h3>
-                        <p class="lead">Share your design idea & our experts will get back with the best possible custom made suggestions</p>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
+      <div class="input-group input-group-icon">
+         <%= form.text_field :city, id: :custom_city, placeholder: "Your City" %>
+        <div class="input-icon"><i class="fa fa-map"></i></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-half">
+        <h4>Ask us any questions, or tell us about your inspiration</h4>
+        <div class="input-group">
+          <div class="input-group input-group-icon">
+         <%= form.text_area :info, id: :custom_info, placeholder: "Any Other Info" %>
+        <div class="input-icon"><i class="fa fa-info"></i></div>
+      </div>
+        </div>
+      </div>
+      <div class="col-half">
+        <h4>More infos about the furniture</h4>
+        <div class="input-group">
+         <div class="input-group input-group-icon">
+         <%= form.text_field :dimension, id: :custom_dimension, placeholder: "Dimensions" %>
+        <div class="input-icon"><i class="fa fa-percent"></i></div>
+      </div>
+        </div>
+      </div>
+    </div>
 
 
 
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn" data-dismiss="modal">Close</button>
-              <%= form.submit "Submit Request", class: "button" %>
-            </div>
 
-<% end %>
+
+    <div class="input-group input-group-icon">
+        <%= form.text_field :wood, placeholder: "Wood (if not sure leave this on us!" %>
+        <div class="input-icon"><i class="fa fa-wrench"></i></div>
+      </div>
+
+    <div class="input-group input-group-icon">
+         <%= form.text_field :polish, placeholder: "Polish (if not sure leave this on us!" %>
+        <div class="input-icon"><i class="fa fa-paint-brush"></i></div>
+      </div>
+
+      <div class="input-group input-group-icon">Choose a photo or a sketch
+         <%= form.file_field :cimage %>
+
+        <div class="input-icon" style="padding-top: 20px;"><i class="fa fa-file"></i></div>
+      </div>
+    
+    <div class="row">
+      <h4>Terms and Conditions</h4>
+      <div class="input-group">
+        <input type="checkbox" id="terms"/>
+        <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+      </div>
+    </div>
+      <div class="actions">
+    <%= form.submit %>
+  </div>
+     <% end %>
+
+  </form>
 </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+
+
+
+</div>
+
+
+
