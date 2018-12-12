@@ -3,13 +3,7 @@ class OrdersController < ApplicationController
 		@order = current_cart.order
 	end
 
-	def blow
-		@orders = Order.all
-	end
 
-	def show
-		@orders = Order.all
-	end
 
 	def create
 		@order = current_cart.order
