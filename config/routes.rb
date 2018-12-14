@@ -50,7 +50,9 @@ Rails.application.routes.draw do
   resources :order_items, path: '/cart/items'
   get '/cart/checkout', to: 'orders#new', as: :checkout
   patch '/cart/checkout', to: 'orders#create'
-   get '/orders/blow', to: 'orders#blow', as: :tracking
+  get '/orders/blow', to: 'orders#blow', as: :tracking
+  get '/order_tracking', to: 'orders#order_tracking'
+  get '/order_status', to: 'orders#order_status'
   
 
 

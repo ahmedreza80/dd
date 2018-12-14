@@ -64,11 +64,12 @@ body {
 .shipment {
 	width:100%;
 	margin-top:10%;
+	margin-left: 12%;
 }
 span.line {
     height: 5px;
     width: 90px;
-    background-color:#F5998E;
+
     display: block;
     position: absolute;
     top: 28%;
@@ -90,8 +91,25 @@ span.line {
 .quality .imgcircle {
 	background-color:#F5998E;
 }
+.qualitytwo .imgcircle {
+	background-color:#98D091;
+}
+
+.dispatch .imgcircle {
+	background-color:#F5998E;
+}
+.dispatchtwo .imgcircle {
+	background-color:#98D091;
+}
 
 
+
+.delivery .imgcircle {
+	background-color:#F5998E;
+}
+.deliverytwo .imgcircle {
+	background-color:#98D091;
+}
 
 .confirm span.line {
 	background-color:#98D091; 
@@ -101,6 +119,32 @@ span.line {
 
 .process span.line {
 	background-color:#F5998E; 
+}
+
+
+.quality span.line {
+	background-color:#F5998E; 
+}
+
+.dispatch span.line {
+	background-color:#F5998E; 
+}
+.delivery span.line {
+	background-color:#F5998E; 
+}
+
+
+.deliverytwo span.line {
+	background-color:#98D091; 
+}
+
+
+.qualitytwo span.line {
+	background-color:#98D091; 
+}
+
+.dispatchtwo span.line {
+	background-color:#98D091; 
 }
 .content3 p {
 	margin-left:-50%;
@@ -132,13 +176,35 @@ span.line {
 	text-align:center;
 	float:left;
 }
+
+.qualitytwo {
+	position:relative;
+	width:20%;
+	text-align:center;
+	float:left;
+}
 .dispatch{
 	position:relative;
 	width:20%;
 	text-align:center;
 	float:left;
 }
+
+.dispatchtwo{
+	position:relative;
+	width:20%;
+	text-align:center;
+	float:left;
+}
 .delivery{
+	position:relative;
+	width:20%;
+	text-align:center;
+	float:left;
+	margin-right:-9%;
+}
+
+.deliverytwo{
 	position:relative;
 	width:20%;
 	text-align:center;
@@ -436,11 +502,25 @@ span.line {
 	width:100%;
 	margin: 22% 0 0 5%;
 }
+
+.qualitytwo{
+	width:100%;
+	margin: 22% 0 0 5%;
+}
 	.dispatch{
 	width:100%;
 	margin: 22% 0 0 5%;
 }
+.dispatchtwo{
+	width:100%;
+	margin: 22% 0 0 5%;
+}
 	.delivery{
+	width:100%;
+	margin: 22% 0 0 5%;
+}
+
+.deliverytwo{
 	width:100%;
 	margin: 22% 0 0 5%;
 }

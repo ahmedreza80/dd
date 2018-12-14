@@ -92,4 +92,5 @@ class WelcomeController < ApplicationController
   def wt
     @products = Product.all
   end
+
 end
