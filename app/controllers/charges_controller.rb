@@ -27,7 +27,7 @@ class ChargesController < ApplicationController
 				phone_number  = '+91'+@@phone  #CONTACT NUMBER
 			end
 			if phone_number.size > 10
-	        	# twilio_sms_send(phone_number,message)
+	        	twilio_sms_send(phone_number,message)
 			end	
 	    end  
 	    puts message  
