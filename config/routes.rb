@@ -61,6 +61,7 @@ Rails.application.routes.draw do
   get "welcome/sofas"
   get "welcome/about"
   get "welcome/contact"
+  get "welcome/merrychristmas"
   get "welcome/privacy"
   get "welcome/faq"
   get "welcome/delivery"
