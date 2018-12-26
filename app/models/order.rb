@@ -1,6 +1,6 @@
 class Order < ApplicationRecord
 	has_many :items, class_name: 'OrderItem'
-	Order.where("mobile_number is null and order_id is null and created_at < ?",Time.current - 20.minutes).delete_all
+	Order.where("mobile_number is null and order_id is null and created_at < ?",Time.current - 1.minutes).delete_all
 	def tracking_enum
     # Do not select any value, or add any blank field. RailsAdmin will do it for you.
     ['Order Recived', 'Quality Check', 'Out for delivery', 'Shipment Completed' ]
