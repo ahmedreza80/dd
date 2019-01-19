@@ -97,6 +97,7 @@ Rails.application.routes.draw do
   get "welcome/wss"
   get "welcome/wt"
   get "welcome/trackitdown"
+  get "welcome/index"
 
   root 'welcome#index'
 
