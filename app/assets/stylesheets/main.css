@@ -42,42 +42,42 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 @font-face {
   font-family: Montserrat-Regular;
-  src: url('../assets/montserrat/Montserrat-Regular.ttf'); 
+  src: url('../assets/Montserrat-Regular.ttf'); 
 }
 
 @font-face {
   font-family: Montserrat-Medium;
-  src: url('../assets/montserrat/Montserrat-Medium.ttf'); 
+  src: url('../assets/Montserrat-Medium.ttf'); 
 }
 
 @font-face {
   font-family: Montserrat-Bold;
-  src: url('../assets/montserrat/Montserrat-Bold.ttf'); 
+  src: url('../assets/Montserrat-Bold.ttf'); 
 }
 
 @font-face {
   font-family: Montserrat-Italic;
-  src: url('../assets/montserrat/Montserrat-Italic.ttf'); 
+  src: url('../assets/Montserrat-Italic.ttf'); 
 }
 
 @font-face {
   font-family: Montserrat-Black;
-  src: url('../assets/montserrat/Montserrat-Black.ttf'); 
+  src: url('../assets/Montserrat-Black.ttf'); 
 }
 
 @font-face {
   font-family: Linearicons;
-  src: url('../assets/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf'); 
+  src: url('../assets/Linearicons-Free.ttf'); 
 }
 
 @font-face {
   font-family: Poppins-Bold;
-  src: url('../assets/poppins/Poppins-Bold.ttf'); 
+  src: url('../assets/Poppins-Bold.ttf'); 
 }
 
 @font-face {
   font-family: Poppins-Black;
-  src: url('../assets/poppins/Poppins-Black.ttf'); 
+  src: url('../assets/Poppins-Black.ttf'); 
 }
 
 /*[ RESTYLE TAG ]

@@ -36,7 +36,7 @@
   <link rel="stylesheet" type="text/css" href="/assets/main.css">
 <!--===============================================================================================-->
 </head>
-<body class="animsition">
+
 
   <!-- Header -->
   <header class="header1">
@@ -211,7 +211,7 @@
       <div class="btn-show-menu">
         <!-- Header Icon mobile -->
         <div class="header-icons-mobile">
-          <a href="#" class="header-wrapicon1 dis-block">
+          <a href="users/sign_in" class="header-wrapicon1 dis-block">
             <img src="/assets/icon-header-01.png" class="header-icon1" alt="ICON">
           </a>
 
@@ -219,7 +219,7 @@
 
           <div class="header-wrapicon2">
             <img src="/assets/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-            <span class="header-icons-noti">0</span>
+            <span class="header-icons-noti"><%= link_to pluralize(current_cart.items_count, ''), cart_path %></span>
 
             <!-- Header cart noti -->
             <div class="header-cart header-dropdown">
@@ -335,33 +335,33 @@
           </li>
 
           <li class="item-menu-mobile">
-            <a href="index.html">Home</a>
+            <a href="welcome/index">Home</a>
             
             <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
           </li>
 
           <li class="item-menu-mobile">
-            <a href="product.html">Shop</a>
+            <a href="welcome/sofas">Sofas</a>
           </li>
 
           <li class="item-menu-mobile">
-            <a href="product.html">Sale</a>
+            <a href="welcome/chair">Chairs</a>
           </li>
 
           <li class="item-menu-mobile">
-            <a href="cart.html">Categories</a>
+            <a href="welcome/ksb">Beds</a>
           </li>
 
           <li class="item-menu-mobile">
-            <a href="blog.html">Blog</a>
+            <a href="custom/new">Customization</a>
           </li>
 
           <li class="item-menu-mobile">
-            <a href="about.html">About</a>
+            <a href="interior/new">Interior</a>
           </li>
 
           <li class="item-menu-mobile">
-            <a href="contact.html">Contact</a>
+            <a href="welcome/contact">Contact</a>
           </li>
         </ul>
       </nav>
