@@ -1,433 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/assets/header.scss">
-</head>
-
-<body>
-
-  <header>
-
-    <div class="container-fluid">
-
-      <div class="container">
-        <div class="row">
-        <div class="col col-md-4" style="font-size: 20px;">
-
-          <a href="/order_tracking">Track Your Order</a>
-
-        </div>
-        <div class="col col-md-8 contact d-flex justify-content-end">
-
-          <div class="login d-inline">
-            <% if user_signed_in? %>
-          Hi, <%= current_user.full_name %>
-        <% else %>
-            <a href="/users/sign_in">SignIn </a>
-            /
-            <a href="/users/sign_up">&nbsp;SignUp</a>
-          </div>
-          <% end %>
-          <i class="fa fa-whatsapp d-inline" aria-hidden="true"></i>
-          <span class="d-inline"><a href="https://api.whatsapp.com/send?phone=919748444800">9748 444 800</a> | <a href="mailto:info@dennydots.com.com">info@dennydots.com</a></span>
-          <br>
-          <% if user_signed_in? %>
-          <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-          <% end %>
-        </div>
-      </div>
-      </div>
-
-      <div class="row">
-      <div class="col col-md-4 d-sm-none d-md-block my-3">
-        <div class="header-nav  d-flex justify-content-center">
-        <ul class="nav">
-    <li class="nav-item">
-      <b><a class="nav-link active" href="/">Home</a></b>
-    </li>
-    <li class="nav-item">
-      <b><a class="nav-link" href="/welcome/about">About</a></b>
-    </li>
-    <li class="nav-item">
-      <b><a class="nav-link" href="/welcome/contact">Contact</a></b>
-    </li>
-  </ul>
-  </div>
-      </div>
-      <div class="col col-md-4 col-sm-6">
-          <div class="container d-flex justify-content-center">
-            <a href="/welcome/index">
-          <img src="/assets/logo.png" alt="logo" class="img-fluid logo">
-          </a>
-          </div>
-      </div>
-      <div class="col col-md-4 col-sm-6">
-        <div class="container">
-          <div class="row">
-
-            <div class="col col-md-8 col-sm-10 d-flex justify-content-end">
-        <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="search-btn my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-      </form>
-      </div>
-      <div class="col col-md-4" style="font-size: 20px;">
-          <%= link_to pluralize(current_cart.items_count, ''), cart_path %><img src="https://img.icons8.com/windows/40/000000/shopping-cart.png">
-
-        
-
-        </div>
-      <div class="col col-md-4 col-sm-2 d-flex justify-content-center">
-       
-      </div>
-      </div>
-      </div>
-    </div>
-      </div>
-    </div>
-  </div>
-  </div>
-    <!-- Container For Navbar -->
-  <div class="container-fluid bg-dark">
-
-  <div class="container">
-    <!--Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <!--Nav Link 1 -->
-
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-    <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="link-custom">LIVING</span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <div class="container large-box  text-uppercase">
-          <div class="row">
-            <div class="col col-md-6">
-              <h3 class="d-flex justify-content-center">Liven up Your Living room</h3>
-              <div class="row">
-                <div class="col-md-4 vl">
-                  <h4>Seating<img class="img-icons"src="https://png.icons8.com/ios/50/000000/living-room.png"></h4>
-                    <ul class="nav flex-column navbar-nav">
-                    <li class="nav-item"><a href="/welcome/sofas" class="nav-link">Sofas</a></li>
-                    <li class="nav-item"><a href="/welcome/chair" class="nav-link">Chairs</a></li>
-                    <li class="nav-item"><a href="/welcome/bench" class="nav-link">Benches</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-4 vl">
-                  <h4>Storage<img class="img-icons" src="https://png.icons8.com/ios/50/000000/book-shelf.png"></h4>
-                    <ul class="nav flex-column navbar-nav">
-                    <li class="nav-item"><a href="/welcome/tc" class="nav-link">Tv Cabinats</a></li>
-                    <li class="nav-item"><a href="/welcome/bc" class="nav-link">Book Cabinats</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-4">
-                  <h4>Tables<img class="img-icons" src="https://png.icons8.com/ios/50/000000/table.png"></h4>
-                    <ul class="nav flex-column navbar-nav">
-                    <li class="nav-item"><a href="/welcome/ct" class="nav-link">Center Tables</a></li>
-                    <li class="nav-item"><a href="/welcome/sidet" class="nav-link">side tables</a></li>
-                    <li class="nav-item"><a href="/welcome/st" class="nav-link">spot tables</a></li>
-                    <li class="nav-item"><a href="/welcome/wt" class="nav-link">writing tables</a></li>
-                  </ul>
-                </div>
-              </div>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <div class="container">
-                  <div class="row justify-content-center">
-                    <a href="/customs/new"><button type="button" class="btn btn-warning">Custom</button></a>
-                  </div>
-                  </div>
-            </div>
-            <div class="col col-md-6">
-              
-              <img src="/assets/living.jpg" alt="" class="img-fluid">
-            </div>
-          </div>
-        </div>
-        </div>
-  </li>
-
-
-  <!--Nav Link 2 -->
-
-  <li class="nav-item">
-
-    <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="link-custom">SOFAS</span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <div class="container large-box  text-uppercase">
-          <div class="row">
-            <div class="col col-md-6">
-              <h3 class="d-flex justify-content-center">Love yourself enough to get up!</h3>
-              <div class="row">
-                <div class="col-md-6 vl">
-                  <a href="/welcome/fss" style="color:#000;">
-                  <h4>fabricated sofa sets<img class="img-icons" src="https://png.icons8.com/color/50/000000/sofa.png"></h4>
-                </a>
-                    <ul class="nav flex-column navbar-nav">
-                    <li class="nav-item"><a href="/welcome/oss" class="nav-link">1 seater sofa</a></li>
-                    <li class="nav-item"><a href="/welcome/tss" class="nav-link">2 seater sofa</a></li>
-                    <li class="nav-item"><a href="/welcome/thss" class="nav-link">3 seater sofa</a></li>
-                    <li class="nav-item"><a href="/welcome/lss" class="nav-link">l shaped corner sofa</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <a href="/welcome/wss" style="color:#000;">
-                  <h4>wodden sofa sets<img class="img-icons"src="https://png.icons8.com/color/50/000000/city-bench.png"></h4>
-                </a>
-                </div>
-
-              </div>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <div class="container">
-                  <div class="row justify-content-center">
-                    <a href="/customs/new"><button type="button" class="btn btn-warning">Custom</button></a>
-                  </div>
-                  </div>
-            </div>
-            <div class="col col-md-6">
-              
-              <img src="/assets/sofas.jpg" alt="" class="img-fluid">
-            </div>
-          </div>
-        </div>
-        </div>
-  </li>
-
-
-        <!--Nav Link 3 -->
-
-        <li class="nav-item">
-
-          <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="link-custom">DINING</span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <div class="container large-box  text-uppercase">
-                <div class="row">
-                  <div class="col col-md-6">
-                    <h3 class="d-flex justify-content-center">We have lost the art of eating well</h3>
-                    <div class="row">
-                      <div class="col-md-4 vl">
-                        <h4>tables<img class="img-icons" src="https://png.icons8.com/ios/50/000000/table.png"></h4>
-                          <ul class="nav flex-column navbar-nav">
-                          <li class="nav-item"><a href="/welcome/dt" class="nav-link">dining tables <tables></tables></a></li>
-
-                        </ul>
-                      </div>
-                      <div class="col-md-4 vl">
-                        <h4>seating<img class="img-icons"src="https://png.icons8.com/ios/50/000000/living-room.png"></h4>
-                          <ul class="nav flex-column navbar-nav">
-                          <li class="nav-item"><a href="/welcome/chair" class="nav-link">chairs</a></li>
-                          <li class="nav-item"><a href="/welcome/bench" class="nav-link">Benches</a></li>
-
-                        </ul>
-                      </div>
-                      <div class="col-md-4">
-                        <h4>Storage and display<img class="img-icons" src="https://png.icons8.com/ios/50/000000/book-shelf.png"></h4>
-                          <ul class="nav flex-column navbar-nav">
-                          <li class="nav-item"><a href="/welcome/kc" class="nav-link">Cabinats</a></li>
-
-                        </ul>
-                      </div>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
-                    <div class="container">
-                  <div class="row justify-content-center">
-                    <a href="/customs/new"><button type="button" class="btn btn-warning">Custom</button></a>
-                  </div>
-                  </div>
-                  </div>
-                  <div class="col col-md-6">
-                 
-                    <img src="/assets/dining.jpg" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              </div>
-        </li>
-
-
-      <!--Nav Link 4 -->
-
-      <li class="nav-item">
-
-        <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="link-custom">BEDROOM</span>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <div class="container large-box  text-uppercase">
-              <div class="row">
-                <div class="col col-md-6">
-                  <h3 class="d-flex justify-content-center">Wake up refreshed</h3>
-                  <div class="row">
-                    <div class="col-md-6 vl">
-                      <h4>beds<img class="img-icons" src="https://png.icons8.com/ios/50/000000/bed.png"></h4>
-                        <ul class="nav flex-column navbar-nav">
-                        <li class="nav-item"><a href="/welcome/qsb" class="nav-link">Queen size beds</a></li>
-                        <li class="nav-item"><a href="/welcome/ksb" class="nav-link">king size beds</a></li>
-                        <li class="nav-item"><a href="/welcome/sb" class="nav-link">single beds</a></li>
-                        <li class="nav-item"><a href="/welcome/stb" class="nav-link">Storage beds</a></li>
-                        <li class="nav-item"><a href="/welcome/ub" class="nav-link">upholstered beds</a></li>
-                        <li class="nav-item"><a href="/welcome/scb" class="nav-link">sofa cum beds</a></li>
-                        <li class="nav-item"><a href="/welcome/db" class="nav-link">double beds</a></li>
-                        <li class="nav-item"><a href="/welcome/dib" class="nav-link">divan bed</a></li>
-                        <li class="nav-item"><a href="/welcome/kb" class="nav-link">kids beds</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-md-6 vl">
-                      <h4>bedroom storage<img class="img-icons" src="https://png.icons8.com/ios/50/000000/closet.png"></h4>
-                        <ul class="nav flex-column navbar-nav">
-                        <li class="nav-item"><a href="/welcome/bst" class="nav-link">beside table</a></li>
-                        <li class="nav-item"><a href="/welcome/w" class="nav-link">wardrobes</a></li>
-                        <li class="nav-item"><a href="/welcome/drt" class="nav-link">dressing table</a></li>
-                        <li class="nav-item"><a href="/welcome/kst" class="nav-link">kids study table</a></li>
-                        <li class="nav-item"><a href="/welcome/kw" class="nav-link">kids wardrobes</a></li>
-                      </ul>
-                    </div>
-
-                  </div>
-                  <br>
-                  <br>
-
-                  <div class="container">
-                  <div class="row justify-content-center">
-                    <a href="/customs/new"><button type="button" class="btn btn-warning">Custom</button></a>
-                  </div>
-                  </div>
-                </div>
-                <div class="col col-md-6">
-               
-                  <img src="/assets/bedroom.jpg" alt="" class="img-fluid">
-                </div>
-              </div>
-            </div>
-            </div>
-      </li>
-
-
-        <!--Nav Link 5 -->
-
-        <li class="nav-item">
-
-          <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="link-custom">KIDS</span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <div class="container large-box  text-uppercase">
-                <div class="row">
-                  <div class="col col-md-6">
-                    <h3 class="d-flex justify-content-center">Sweet Dream in Every size</h3>
-                    <div class="row">
-                      <div class="col-md-4 vl">
-                        <a href="/welcome/kb" style="color:#000;">
-                        <h4>kids bed<img class="img-icons"src="https://png.icons8.com/ios/50/000000/bed.png"></h4>
-                        </a>
-                      </div>
-                      <div class="col-md-4 vl">
-                        <a href="/welcome/kst" style="color:#000;">
-                        <h4>kids study <br>table<img class="img-icons"src="https://png.icons8.com/ios/50/000000/table.png"></h4>
-                        </a>
-                      </div>
-                      <div class="col-md-4">
-                        <a href="/welcome/kw" style="color:#000;">
-                        <h4>kids <br>Storage<img class="img-icons"src="https://png.icons8.com/ios/50/000000/wardrobe.png"></h4>
-                        </a>
-                      </div>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="container">
-                  <div class="row justify-content-center">
-                    <a href="/customs/new"><button type="button" class="btn btn-warning">Custom</button></a>
-                  </div>
-                  </div>
-                  </div>
-                  <div class="col col-md-6">
-                  
-                    <img src="/assets/kids.jpg" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              </div>
-        </li>
-
-        <!-- Nav link 6 -->
-
-        <li class="nav-item">
-
-          <a  href="/interiors/new" aria-expanded="false">
-                  <span class="link-custom">INTERIOR</span>
-                  <span class="badge badge-warning">New</span>
-              </a>
-              
-        </li>
-
-
-          <!-- Nav link 7 -->
-
-          <li class="nav-item">
-
-            <a  href="/customs/new" aria-expanded="false">
-                    <span class="link-custom">CUSTOMIZATION</h1></span>
-                    <span class="badge badge-warning">New</span>
-                </a>
-              
-          </li>
-      </div>
-      </nav>
-  </div>
-  </div>
-
-  </header>
-
-
-<script>
-
-$(window).scroll(function(){
-  if ($(window).scrollTop() >= 100) {
-      $('.bg-dark').addClass('fixed-header');
-  }
-  else {
-      $('.bg-dark').removeClass('fixed-header');
-  }
-});
-  </script>
-
+  <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+  <link rel="icon" type="image/png" href="/assets/favicon.png"/>
   
-</body>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/bootstrap.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/themify-icons.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/icon-font.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/style.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/animate.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/hamburgers.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/animsition.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/select2.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/daterangepicker.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/slick.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/lightbox.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/util.css">
+  <link rel="stylesheet" type="text/css" href="/assets/main.css">
+<!--===============================================================================================-->
+</head>
+<body class="animsition">
+
+  <!-- Header -->
+  <header class="header1">
+    <!-- Header desktop -->
+    <div class="container-menu-header">
+      <div class="topbar">
+        <div class="topbar-social">
+          <a href="#" class="topbar-social-item fa fa-facebook"></a>
+          <a href="#" class="topbar-social-item fa fa-instagram"></a>
+          <a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
+          <a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+          <a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+        </div>
+
+        <span class="topbar-child1">
+          Free shipping for standard order over $100
+        </span>
+
+        <div class="topbar-child2">
+          <span class="topbar-email">
+            fashe@example.com
+          </span>
+
+          <div class="topbar-language rs1-select2">
+            <select class="selection-1" name="time">
+              <option>USD</option>
+              <option>EUR</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap_header">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="/assets/logo.png" alt="IMG-LOGO">
+        </a>
+
+        <!-- Menu -->
+        <div class="wrap_menu">
+          <nav class="menu">
+            <ul class="main_menu">
+              <li>
+                <a href="index.html">Home</a>
+                
+              </li>
+
+              <li>
+                <a href="welcome/sofas">Sofas</a>
+              </li>
+
+              <li class="sale-noti">
+                <a href="welcome/chair">Chairs</a>
+              </li>
+
+              <li>
+                <a href="welcome/ksb">Beds</a>
+              </li>
+
+              <li>
+                <a href="custom/new">Customisation</a>
+              </li>
+
+              <li>
+                <a href="interior/new">Interior</a>
+              </li>
+
+              <li>
+                <a href="welcome/contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Header Icon -->
+        <div class="header-icons">
+          <a href="users/sign_in" class="header-wrapicon1 dis-block">
+            <img src="/assets/icon-header-01.png" class="header-icon1" alt="ICON">
+          </a>
+
+          <span class="linedivide1"></span>
+
+          <div class="header-wrapicon2">
+            <img src="/assets/icon-header-02.png"  alt="ICON">
+            <span class="header-icons-noti"><%= link_to pluralize(current_cart.items_count, ''), cart_path %></span>
+
+            <!-- Header cart noti -->
+            <div class="header-cart header-dropdown">
+              <ul class="header-cart-wrapitem">
+                <li class="header-cart-item">
+                  <div class="header-cart-item-img">
+                    <img src="/assets/item-cart-01.jpg" alt="IMG">
+                  </div>
+
+                  <div class="header-cart-item-txt">
+                    <a href="#" class="header-cart-item-name">
+                      DennyDots Black Canvas
+                    </a>
+
+                    <span class="header-cart-item-info">
+                      1 x Rs.36,500.00
+                    </span>
+                  </div>
+                </li>
+
+                <li class="header-cart-item">
+                  <div class="header-cart-item-img">
+                    <img src="/assets/item-cart-02.jpg" alt="IMG">
+                  </div>
+
+                  <div class="header-cart-item-txt">
+                    <a href="#" class="header-cart-item-name">
+                      DennyDots Brown Canvas
+                    </a>
+
+                    <span class="header-cart-item-info">
+                      1 x Rs.35,500.00
+                    </span>
+                  </div>
+                </li>
+
+                <li class="header-cart-item">
+                  <div class="header-cart-item-img">
+                    <img src="/assets/item-cart-03.jpg" alt="IMG">
+                  </div>
+
+                  <div class="header-cart-item-txt">
+                    <a href="#" class="header-cart-item-name">
+                      DennyDots Blue Canvas
+                    </a>
+
+                    <span class="header-cart-item-info">
+                      1 x Rs.30,500.00
+                    </span>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="header-cart-total">
+                Total: Rs.97,000.00
+              </div>
+
+              <div class="header-cart-buttons">
+                <div class="header-cart-wrapbtn">
+                  <!-- Button -->
+                  <a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                    View Cart
+                  </a>
+                </div>
+
+                <div class="header-cart-wrapbtn">
+                  <!-- Button -->
+                  <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                    Check Out
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Mobile -->
+    <div class="wrap_header_mobile">
+      <!-- Logo moblie -->
+      <a href="index.html" class="logo-mobile">
+        <img src="/assets/logo.png" alt="IMG-LOGO">
+      </a>
+
+      <!-- Button show menu -->
+      <div class="btn-show-menu">
+        <!-- Header Icon mobile -->
+        <div class="header-icons-mobile">
+          <a href="#" class="header-wrapicon1 dis-block">
+            <img src="/assets/icon-header-01.png" class="header-icon1" alt="ICON">
+          </a>
+
+          <span class="linedivide2"></span>
+
+          <div class="header-wrapicon2">
+            <img src="/assets/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+            <span class="header-icons-noti">0</span>
+
+            <!-- Header cart noti -->
+            <div class="header-cart header-dropdown">
+              <ul class="header-cart-wrapitem">
+                <li class="header-cart-item">
+                  <div class="header-cart-item-img">
+                    <img src="/assets/item-cart-01.jpg" alt="IMG">
+                  </div>
+
+                  <div class="header-cart-item-txt">
+                    <a href="#" class="header-cart-item-name">
+                      White Shirt With Pleat Detail Back
+                    </a>
+
+                    <span class="header-cart-item-info">
+                      1 x $19.00
+                    </span>
+                  </div>
+                </li>
+
+                <li class="header-cart-item">
+                  <div class="header-cart-item-img">
+                    <img src="/assets/item-cart-02.jpg" alt="IMG">
+                  </div>
+
+                  <div class="header-cart-item-txt">
+                    <a href="#" class="header-cart-item-name">
+                      Converse All Star Hi Black Canvas
+                    </a>
+
+                    <span class="header-cart-item-info">
+                      1 x $39.00
+                    </span>
+                  </div>
+                </li>
+
+                <li class="header-cart-item">
+                  <div class="header-cart-item-img">
+                    <img src="/assets/item-cart-03.jpg" alt="IMG">
+                  </div>
+
+                  <div class="header-cart-item-txt">
+                    <a href="#" class="header-cart-item-name">
+                      Nixon Porter Leather Watch In Tan
+                    </a>
+
+                    <span class="header-cart-item-info">
+                      1 x $17.00
+                    </span>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="header-cart-total">
+                Total: $75.00
+              </div>
+
+              <div class="header-cart-buttons">
+                <div class="header-cart-wrapbtn">
+                  <!-- Button -->
+                  <a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                    View Cart
+                  </a>
+                </div>
+
+                <div class="header-cart-wrapbtn">
+                  <!-- Button -->
+                  <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                    Check Out
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div class="wrap-side-menu" >
+      <nav class="side-menu">
+        <ul class="main-menu">
+          <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+            <span class="topbar-child1">
+              Free shipping for standard all over Kolkata
+            </span>
+          </li>
+
+          <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+            <div class="topbar-child2-mobile">
+              <span class="topbar-email">
+                info@dennydots.com
+              </span>
+
+              
+            </div>
+          </li>
+
+          <li class="item-topbar-mobile p-l-10">
+            <div class="topbar-social-mobile">
+              <a href="#" class="topbar-social-item fa fa-facebook"></a>
+              <a href="#" class="topbar-social-item fa fa-instagram"></a>
+              <a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
+              <a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+              <a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+            </div>
+          </li>
+
+          <li class="item-menu-mobile">
+            <a href="index.html">Home</a>
+            
+            <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+          </li>
+
+          <li class="item-menu-mobile">
+            <a href="product.html">Shop</a>
+          </li>
+
+          <li class="item-menu-mobile">
+            <a href="product.html">Sale</a>
+          </li>
+
+          <li class="item-menu-mobile">
+            <a href="cart.html">Categories</a>
+          </li>
+
+          <li class="item-menu-mobile">
+            <a href="blog.html">Blog</a>
+          </li>
+
+          <li class="item-menu-mobile">
+            <a href="about.html">About</a>
+          </li>
+
+          <li class="item-menu-mobile">
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
