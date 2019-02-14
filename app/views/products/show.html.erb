@@ -1,89 +1,71 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/assets/lightbox.scss">
-  <link rel="stylesheet" href="/assets/chairs.scss">
 
+<!--===============================================================================================-->
 </head>
-
-<body>
-
-  <!-- Section Title -->
-    <div class="container-fluid section-title ">
-          <div class="container py-4">
-            <h3 class="text-center"><%= @product.title %></h3>
-            <hr class="title-border">
-          </div>
-    </div>
-
-  <hr>
-
-  <div class="container-fluid">
-    <div class="container">
-      <div class="row">
-        <!--- Left Column -->
-
-        <div class="col col-md-7 col-sm-12 py-2">
-
-            <div class="left-sidebar">
-            <!-- Product Carousel 1  -->
-            <div class="product-carousel-1 tz-gallery">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div data-image="1" class="carousel-item active">
-          <img data-toggle="magnify" class="d-block w-100 hover-shadow" src="<%= @product.previewo %>" alt="First slide" >
-        </div>
-        <div data-image="2" class="carousel-item">
-          <img data-toggle="magnify" class="d-block w-100 hover-shadow" src="<%= @product.previewt %>" alt="Second slide" >
-        </div>
-        <div data-image="3" class="carousel-item">
-          <img data-toggle="magnify" class="d-block w-100 hover-shadow" src="<%= @product.previewth %>" alt="Third slide" >
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-    <div class="product-img">
-      <input data-image="1" type="radio" id="1" name="product-img" value="1" checked>
-      <label for="1"><span><img src="<%= @product.previewo %>"  alt=""></span></label>
-      <input data-image="2" type="radio" id="2" name="product-img" value="2">
-      <label for="2"><span><img src="<%= @product.previewt %>"  alt=""></span></label>
-      <input data-image="3" type="radio" id="3" name="product-img" value="3">
-      <label for="3"><span><img src="<%= @product.previewth %>"  alt=""></span></label>
-    </div>
-    </div>
-    </div>
-          </div>
+<body class="animsition">
 
 
 
+  <!-- Product Detail -->
+  <div class="container bgwhite p-t-35 p-b-80">
+    <div class="flex-w flex-sb">
+      <div class="w-size13 p-t-30 respon5">
+        <div class="wrap-slick3 flex-sb flex-w">
+          <div class="wrap-slick3-dots"></div>
 
-
-        <!--- Right Column -->
-        <div class="col col-md-5 col-sm-12 py-2">
-
-            <div class="price my-2">
-              <p class="h5 text-warning">Our Price: Rs <%= @product.price %></p>
-              <% if @product.offerprice? %>
-              <p class="h3 text-warning">Offer Price Rs <%= @product.offerprice %></p>
-
-            </div>
-            <hr>
-            <div class="saving my-2">
-              <div class="save">
-              <p class="text-center lead"><small>You Save <%= @product.saving %></small><span class="badge badge-warning ml-1"><%= @product.off %>% OFF</span></p>
+          <div class="slick3">
+            <div class="item-slick3" data-thumb="<%= @product.previewo %>">
+              <div class="wrap-pic-w">
+                <img src="<%= @product.previewo %>" alt="IMG-PRODUCT">
               </div>
             </div>
+
+            <div class="item-slick3" data-thumb="<%= @product.previewt %>">
+              <div class="wrap-pic-w">
+                <img src="<%= @product.previewt %>" alt="IMG-PRODUCT">
+              </div>
+            </div>
+
+            <div class="item-slick3" data-thumb="<%= @product.previewth %>">
+              <div class="wrap-pic-w">
+                <img src="<%= @product.previewth %>" alt="IMG-PRODUCT">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-size14 p-t-30 respon5">
+        <h4 class="product-detail-name m-text16 p-b-13">
+          <%= @product.title %>
+        </h4>
+
+        <span class="m-text17">
+          Our Price: Rs <%= @product.price %>
+          <% if @product.offerprice? %>
+              Offer Price Rs <%= @product.offerprice %>
+
+              You Save <%= @product.saving %> <%= @product.off %>% OFF
+              
             <% end %>
-            <hr>
-            <div class="delivery my-2 d-flex justify-content-between">
-              <p class="h3">Delivery</p>
-              <div class="pincode">
+        </span>
+
+        <p class="s-text8 p-t-10">
+          <%= @product.sdescription %>
+        </p>
+
+        <!--  -->
+        <div class="p-t-33 p-b-60">
+          <div class="flex-m flex-w p-b-10">
+            <div class="s-text15 w-size15 t-center">
+              Delivery
+            </div>
+
+            <div class="pincode">
               <form method="post" action="" name="english_registration_form" id="english_registration_form">
     <input type="text" id="name" name="name" aria-describedby="name-format" placeholder="Check your pincode"> <span class="error"><p id="name_error"></p></span>
 
@@ -91,13 +73,14 @@
 
     <button class="register_button" type="submit" value="submit">Check Avaliablity</button>
 </form>
-              </div>
-            </div>
-            <hr>
-            <div class="offers d-flex justify-content-center">
+          </div>
 
-                <div class="coupons-section ">
-                  <% if @product.offerprice? %>
+          <div class="flex-m flex-w">
+            <div class="s-text15 w-size15 t-center">
+              Coupon
+            </div>
+
+            <% if @product.offerprice? %>
                   <p class="h4 text-warning">Offer Rs <%= @product.offerprice %>*</p>
                   <p><small>*The Offer Price Is After Using Coupon</small><span class="coupon-block"><%= @product.coupon %></span></p>
                 </div>
@@ -107,10 +90,9 @@
                 <% if @product.deliveryd? %>
                 <h4><small>*This Product will take <b><%= @product.deliveryd %></b> days to deliver.</small></h4>
                 <% end %>
-            </div>
-            <hr>
-            <!--- btn cart customize -->
-            <div class="button my-2">
+          </div>
+
+          <div class="button my-2">
               <%= form_tag order_items_path do %>
         <%= hidden_field_tag :product_id, @product.id %>
        
@@ -118,31 +100,37 @@
         
         <button type="submit" class="btn cart"><i class="d-inline fa fa-cart-arrow-down" aria-hidden="true"></i><p class="d-inline">Add To Cart</p></button>
       <% end %>
-              
-
-
-              <button type="button" class="btncust" href="customs/i/new"><i class="fa fa-wrench d-inline" aria-hidden="true"></i><p class="d-inline">Customize It</p></button>
-
-
-
-
-
-
-
-            </div>
-
         </div>
 
-      </div>
-    </div>
-  </div>
+        <div class="p-b-45">
+          <button type="button" class="btncust" href="customs/i/new"><i class="fa fa-wrench d-inline" aria-hidden="true"></i><p class="d-inline">Customize It</p></button>
+        </div>
 
-  <!-- Product Description -->
+        <!--  -->
+        <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
+          <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
+            Description
+            <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+            <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+          </h5>
 
-  <div class="container py-4">
-    <hr>
-    <div class="row">
-      <div class="col col-md-4 col-sm-12 vl">
+          <div class="dropdown-content dis-none p-t-15 p-b-23">
+            <p class="s-text8">
+              <%= simple_format h(@product.description) %>
+            </p>
+          </div>
+        </div>
+
+        <div class="wrap-dropdown-content bo7 p-t-15 p-b-14">
+          <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
+            Additional information
+            <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+            <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+          </h5>
+
+          <div class="dropdown-content dis-none p-t-15 p-b-23">
+            <p class="s-text8">
+              <div class="col col-md-4 col-sm-12 vl">
       <h2 class="h6">Details</h2>
       <br>
       <div class="brand py-2">
@@ -172,31 +160,20 @@
             <p class="d-inline"><strong>Depth : </strong></p><p class="   d-inline tex-warning"> <%= @product.depth %></p>
           </div>
       </div>
+            </p>
+          </div>
+        </div>
 
+        <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 ">
+          <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
+            Delivery and Setup
+            <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+            <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+          </h5>
 
-
-    <div class="col col-md-4 col-sm-12 Overview vl">
-        <h2 class="h3">Overview</h2>
-          <p class="text-justify"><%= simple_format h(@product.description) %></p>
-
-    </div>
-      <!-- Question -->
-    <div class="d-none d-md-block col col-md-4">
-
-      <div id="accordion">
-    <div class="card">
-      <div class="card-header" id="headingOne">
-        <h5 class="mb-0">
-          <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            Delivery And Setup
-          </button>
-        </h5>
-      </div>
-
-      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-        <div class="card-body">
-          <b><h5>Delivery and Setup</h5></b>
-<hr>
+          <div class="dropdown-content dis-none p-t-15 p-b-23">
+            <p class="s-text8">
+              <hr>
 At DENNY DOTS, We strive to provide the best home delivery service by partnering with reliable, professional delivery teams in your area. We’ll carefully select the best delivery options for your order to make sure everything arrives safe and sound. 
 <b><h5>Furniture & Mattresses</h5></b>
 <hr>
@@ -206,127 +183,125 @@ The delivery team will uncrate or unpack your new furniture/mattress, set it in 
 During the checkout process, you can select a delivery date that works for you for most large item deliveries. This date is based on product and delivery date availability in your area.
 When you complete your order, you will receive an email order confirmation, which will specify your preferred delivery date. We'll contact you if this date changes for any reason. We'll also send you an email within 7 days of your delivery to confirm the date and the name of the delivery provider.
 Please contact our Customer Care team at least 48 hours before your selected delivery date if you would like to make any changes. 
-<b><h5>Preparing for your Delivery</h5></b>
+<b><h5>Preparing  for your Delivery</h5></b>
 <hr>
 The name on the order must match the government-issued photo ID of the person receiving the delivery. If you're having your product delivered somewhere else, or you'd like to have someone else receive it for you, we'll need to confirm those details with you prior to delivery. 
-<br>
-<br>
 The delivery warehouse will contact you the day before or morning of delivery. To the volume of deliveries that must be routed each day, it is impossible to give exact times.
 Please ensure your driveway and walkways are cleared to accept the delivery. As well please clear the path inside your home to the area where your purchase is to be placed.
-<br>
-<br>
-Prior to ordering and delivery, pre-measure your doorways, entrances, hallways and staircases to ensure your new product will fit. A restocking fee will apply if unwrapped furniture, mattresses, appliances or electronics do not fit through the doorway or in the space intended.
-<br>
-<br>
-Pin hinged doors can be removed to complete delivery. However, carpentry work such as removing doorway moldings, banisters, and so on cannot be done. All pictures in narrow hallways or stairs should be removed by you.  
+Prior to ordering and delivery, pre-measure your doorways, entrances, hallways and staircases to ensure your new product will fit. A restocking fee will apply if unwrapped furniture, mattresses, appliances or electronics do not fit through the doorway or in the space intended. Pin hinged doors can be removed to complete delivery. However, carpentry work such as removing doorway moldings, banisters, and so on cannot be done. All pictures in narrow hallways or stairs should be removed by you.  
 <b><h5>During your Delivery</h5></b>
-<hr>To help protect you from theft and fraud, we require the person listed on the order be on hand, show valid government-issued photo ID and provide their matching signature at the time of delivery.
-<br>
-<br>
- We request our customers to please inspect their order upon receipt for any visible signs of packaging damage, product damage, incorrect product or missing parts before signing the proof of delivery document and before assembling the product. 
- <br>
-<br>
- If any damage is found, please specify these issues on the proof of delivery before signing for the order. Any damages or missing pieces on Assembly Required items must be reported within 48 hours of delivery by contacting our customer care team. 
-
-
+<hr>To help protect you from theft and fraud, we require the person listed on the order be on hand, show valid government-issued photo ID and provide their matching signature at the time of delivery. We request our customers to please inspect their order upon receipt for any visible signs of packaging damage, product damage, incorrect product or missing parts before signing the proof of delivery document and before assembling the product. If any damage is found, please specify these issues on the proof of delivery before signing for the order. Any damages or missing pieces on Assembly Required items must be reported within 48 hours of delivery by contacting our customer care team. 
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingTwo">
-        <h5 class="mb-0">
-          <button class="btn" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Care Instructions
-          </button>
-        </h5>
-      </div>
 
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-        <div class="card-body">
-          <b><h5>Care Instruction </h5></b>
-<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 ">
+          <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
+            Care Instruction
+            <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+            <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+          </h5>
+
+          <div class="dropdown-content dis-none p-t-15 p-b-23">
+            <p class="s-text8">
+              <hr>
 TO PROTECT AND CARE FOR YOUR FURNITURE, DENNY DOTS SUGGEST THE FOLLOWING:
 Avoid placing your furniture in direct sunlight, as sunlight causes fading.
 
-<br>
-<br>
 Avoid extreme changes in temperature by arranging furniture away from radiators, heat and air vents and air conditioning units.
 
-<br>
-<br>
-
 Avoid placing plastic or rubber materials (lamp bases, notebooks, placemats, etc.) on your furniture, as certain plastics contain ingredients that may damage the finish.
-
-<br>
-<br>
 
 Periodically rotate accessories on furniture so they do not sit in the same spot all the time.
 
 Use pads, cloth or felt to protect the furniture surface from plastic, rubber, hot dishes, beverages, bookends, flowerpots and vases.
 
-<br>
-<br>
-
 Clean up spills immediately. Use a blotting rather than a wiping action. Water left over a long period of time will cause white spots in the finish. Alcohol, perfume, after-shave and medications can cause severe finish damage.
 
-<br>
-<br>
 Use a protective pad when writing with a ballpoint pen on the furniture surface.
 
 Lift and place objects rather than dragging them across the furniture surface.
 
 Avoid placing furniture directly under windows.
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingThree">
-        <h5 class="mb-0">
-          <button class="btn collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Returns
-          </button>
-        </h5>
-      </div>
-      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-        <div class="card-body">
-          <b><h5>Returns and Exchanges</h5></b>
-<hr>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="wrap-dropdown-content bo6 p-t-15 p-b-14 ">
+          <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
+            Returns & Exchange
+            <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+            <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+          </h5>
+
+          <div class="dropdown-content dis-none p-t-15 p-b-23">
+            <p class="s-text8">
+              <hr>
 At Dennydots.com, we’re committed to creating a better online shopping experience. If for some reason you aren’t completely satisfied with your purchase, contact us and we will do what we can to make it right. 
-<br>
-<br>
 
-Our delivery teams treat your order with care so it can arrive in the best condition possible, but if there is any visible damage on the merchandise or to your home during the delivery process, please notify our delivery team and make sure it is recorded in the delivery paperwork.
-<br>
-<br>
- Then, contact our Customer Care team within 48 hours of the delivery so we can try to repair or replace the damaged item as soon as possible. Since our Product is made only against orders placed, we are unable to extend any kind of returns.
- <br>
-<br> 
- If you choose to cancel your order, please know that you forfeit the advance paid. Prior to signing for your delivery, please carefully inspect the products to ensure your satisfaction.
-<br>
-<br>
+Our delivery teams treat your order with care so it can arrive in the best condition possible, but if there is any visible damage on the merchandise or to your home during the delivery process, please notify our delivery team and make sure it is recorded in the delivery paperwork. Then, contact our Customer Care team within 48 hours of the delivery so we can try to repair or replace the damaged item as soon as possible. Since our Product is made only against orders placed, we are unable to extend any kind of returns. If you choose to cancel your order, please know that you forfeit the advance paid. Prior to signing for your delivery, please carefully inspect the products to ensure your satisfaction.
+
 Cancellation 
-Orders can be cancelled as long as they haven’t already been reserved onto our manufacturing floor.
-<br>
-<br>
- To cancel, please get in touch with us on our customer care number or write to us at info@dennydots.com from your registered email address within 48 hours. Items bought on discount during sale are not eligible for cancellation after delivery.
-
-
-
+Orders can be cancelled as long as they haven’t already been reserved onto our manufacturing floor. To cancel, please get in touch with us on our customer care number or write to us at info@dennydots.com from your registered email address within 48 hours. Items bought on discount during sale are not eligible for cancellation after delivery.
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingFour">
-        <h5 class="mb-0">
-          <button class="btn collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 ">
+          <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
             Warranty Terms
-          </button>
-        </h5>
-      </div>
-      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-        <div class="card-body">
-          <b><h5>General Conditions for Limited Warranty</h5></b>
+            <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+            <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+          </h5>
+
+          <div class="dropdown-content dis-none p-t-15 p-b-23">
+            <p class="s-text8">
+
 <hr>
 <b>What is covered under the Limited Warranty?</b>
 <hr>
@@ -338,16 +313,7 @@ Each limited warranty lasts for the number of years stated against each product 
 <br>
 <b>What will be done to correct the problem?</b>
 <hr>
-DENNY DOTS will examine the product and decide if it’s covered under this limited warranty. DENNY DOTS will then, at its choice, either repair the defective product or replace it with the same or a comparable product.
-<br>
-<br>
- In these cases, DENNY DOTS will be responsible for the costs of repairs, spare parts, labor and travel for repair staff that DENNY DOTS incurs, provided that the product is accessible for repair without DENNY DOTS incurring additional expenditure to gain access.
- <br>
-<br>
- This will not apply in cases where repair work has not been authorized by DENNY DOTS. Any defective parts removed in the course of repair works will become the property of DENNY DOTS.
- <br>
-<br>
- If the item is no longer sold by DENNY DOTS, DENNY DOTS will provide an appropriate replacement. DENNY DOTS will decide at its discretion, what will constitute an appropriate replacement.
+DENNY DOTS will examine the product and decide if it’s covered under this limited warranty. DENNY DOTS will then, at its choice, either repair the defective product or replace it with the same or a comparable product. In these cases, DENNY DOTS will be responsible for the costs of repairs, spare parts, labor and travel for repair staff that DENNY DOTS incurs, provided that the product is accessible for repair without DENNY DOTS incurring additional expenditure to gain access. This will not apply in cases where repair work has not been authorized by DENNY DOTS. Any defective parts removed in the course of repair works will become the property of DENNY DOTS. If the item is no longer sold by DENNY DOTS, DENNY DOTS will provide an appropriate replacement. DENNY DOTS will decide at its discretion, what will constitute an appropriate replacement.
 <br>
 <b>Conditions for the Limited Warranties:</b>
 <hr>
@@ -355,13 +321,7 @@ The limited warranties are valid from the date of purchase. The original purchas
 <br>
 <b>Exclusions:</b>
 <hr>
-The limited warranties do not apply to products that have been stored or assembled incorrectly, used inappropriately, abused, misused, altered, or cleaned with wrong cleaning methods or wrong cleaning products.
-<br>
-<br>
- The warranties do not cover normal wear and tear, cuts or scratches, or damage caused by impacts or accidents. The warranties do not apply if products have been placed outdoors or in a humid environment or if the products have been used for non-domestic purposes (unless otherwise stated). 
- <br>
-<br>
-The warranty does not cover consequential or incidental damages. The warranties are to the benefit of the original purchaser of the product. They are not transferable. For details see the limited warranty conditions and description for each product.
+The limited warranties do not apply to products that have been stored or assembled incorrectly, used inappropriately, abused, misused, altered, or cleaned with wrong cleaning methods or wrong cleaning products. The warranties do not cover normal wear and tear, cuts or scratches, or damage caused by impacts or accidents. The warranties do not apply if products have been placed outdoors or in a humid environment or if the products have been used for non-domestic purposes (unless otherwise stated). The warranty does not cover consequential or incidental damages. The warranties are to the benefit of the original purchaser of the product. They are not transferable. For details see the limited warranty conditions and description for each product.
 <br>
 <b>Care instructions:</b>
 <hr>
@@ -369,18 +329,19 @@ To be able to claim this limited warranty you need to follow the specific care i
 <br>
 <b>How to reach us if you need service:</b>
 <hr>
-Contact DENNY DOTS <a href="/welcome/contact">Customer Care</a>. You will find the support team to assist you for the service .Save your sales receipt as proof of purchase. 
+Contact DENNY DOTS <a href="/welcome/contact">Customer Care</a>. You will find the support team to assist you for the service .Save your sales receipt as proof of purchase.
+            </p>
+          </div>
+        </div>
 
+
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-    </div>
 
-  </div>
-  </div>
-
-  <!-- Related -->
 
   <div class="container-fluid section-title ">
         <div class="container py-4">
@@ -448,4 +409,61 @@ document.getElementById("name").onkeyup = removeWarning;
 </script>
 
 
+
 </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

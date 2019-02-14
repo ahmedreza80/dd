@@ -2354,7 +2354,7 @@
 /*[ Wrap Picture ]
 -----------------------------------------------------------
 */
-.wrap-pic-w img {width: 100%;}
+.wrap-pic-w img {width: 400px; height: 400px;}
 .wrap-pic-max-w img {max-width: 100%;}
 
 /* ------------------------------------ */
@@ -3295,7 +3295,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 
 .m-text17 {
 	font-family: Montserrat-Regular;
-	font-size: 30px;
+	font-size: 24px;
 	color: #555555;
 	line-height: 1.2;
 }
