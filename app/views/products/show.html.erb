@@ -6,7 +6,7 @@
 
 <!--===============================================================================================-->
 </head>
-<body class="animsition">
+
 
 
 
@@ -45,9 +45,14 @@
         </h4>
 
         <span class="m-text17">
-          Our Price: Rs <%= @product.price %>
+          <span class="block2-oldprice m-text7 p-r-5">
+                  Our Price: Rs <%= @product.price %>
+                </span>
+                <br>
+          
           <% if @product.offerprice? %>
               Offer Price Rs <%= @product.offerprice %>
+              <br>
 
               You Save <%= @product.saving %> <%= @product.off %>% OFF
               
@@ -410,7 +415,7 @@ document.getElementById("name").onkeyup = removeWarning;
 
 
 
-</body>
+
 </html>
 
 
