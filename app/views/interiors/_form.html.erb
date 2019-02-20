@@ -33,19 +33,19 @@
                     <p class="h1 text-center">Book A Expert</p>
                     <%= form_with(model: interior, local: true) do |form| %>
                     <div class="form-group">
-                        <%= form.text_field :name, id: :interior_name , placeholder: "Your Full Name"%>
+                        <%= form.text_field :name, id: :interior_name , :required => true, placeholder: "Your Full Name"%>
                     </div>
 
                     <div class="form-group">
-                            <%= form.text_field :email, id: :interior_email, placeholder: "Your Email" %>
+                            <%= form.text_field :email, id: :interior_email, :required => true, placeholder: "Your Email" %>
                     </div>
 
                     <div class="form-group">
-                            <%= form.text_field :mobile, id: :interior_mobile, placeholder: "Your Mobile Number" %>
+                            <%= form.text_field :mobile, id: :interior_mobile, :required => true, placeholder: "Your Mobile Number" %>
                     </div>
 
                     <div class="form-group">
-                            <%= form.text_field :city, id: :interior_city, placeholder: "Your City Where you want the servic" %>
+                            <%= form.text_field :city, id: :interior_city, :required => true, placeholder: "Your City Where you want the servic" %>
                     </div>
                     <br />
                     <br />

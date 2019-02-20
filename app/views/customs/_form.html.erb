@@ -34,20 +34,20 @@
     <div class="row">
       <h4>Customize It . The Way You Want to!!</h4>
       <div class="input-group input-group-icon">
-        <%= form.text_field :name, id: :custom_name, placeholder: "Full Name" %>
+        <%= form.text_field :name, id: :custom_name, :required => true, placeholder: "Full Name" %>
         <div class="input-icon"><i class="fa fa-user"></i></div>
       </div>
       <div class="input-group input-group-icon">
-        <%= form.text_field :email, id: :custom_email, placeholder: "Email Address" %>
+        <%= form.text_field :email, id: :custom_email, :required => true, placeholder: "Email Address" %>
         <div class="input-icon"><i class="fa fa-envelope"></i></div>
       </div>
       <div class="input-group input-group-icon">
-        <%= form.text_field :phone, id: :custom_phone, placeholder: "Mobile Number" %>
+        <%= form.text_field :phone, id: :custom_phone, :required => true, placeholder: "Mobile Number" %>
         <div class="input-icon"><i class="fa fa-phone"></i></div>
       </div>
 
       <div class="input-group input-group-icon">
-         <%= form.text_field :city, id: :custom_city, placeholder: "Your City" %>
+         <%= form.text_field :city, id: :custom_city, :required => true, placeholder: "Your City" %>
         <div class="input-icon"><i class="fa fa-map"></i></div>
       </div>
     </div>
