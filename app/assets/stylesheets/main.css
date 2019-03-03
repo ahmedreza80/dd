@@ -11,10 +11,7 @@ h1, p {
     color: #ff8c00;
 }
 
-hr {
-    width: 300px;
-    border-bottom: 1px solid #ff8c00;
-}
+
 
 .section-main .list-group-item p {
     font-size: 16px;

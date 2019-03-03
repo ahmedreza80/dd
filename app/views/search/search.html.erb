@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
+    <link href="/assets/searchit.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="s006">
+      <form>
+        <fieldset>
+          <legend>What are you looking for?</legend>
+          <%= form_for search_path, method: :get do |f| %>
+          <div class="inner-form">
+            <div class="input-field">
+              <%= f.label "" %>
+              
+
+            <%= text_field_tag :q, params[:q], placeholder: "Search for anything Ex: Sofa", class: 'form-control' %>
+              <%= button_tag(type: "submit", class: "btn-search") do %>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"<%= submit_tag name: nil %>></path>
+                </svg>
+              <% end %>
+            </div>
+          </div>
+          <% end %>
+          <div class="suggestion-wrap">
+            <span><a href="/welcome/sofas"></a></span>
+            <span><a href="/welcome/sofas">Sofas</a></span>
+            <span><a href="/welcome/dining">Dining</a></span>
+            <span><a href="/welcome/beds">Beds</a></span>
+            <span><a href="/welcome/customs/new">Customisation</a></span>
+            <span><a href="/welcome/interiors/new">DécorWork</a></span>
+          </div>
+          <% @products.each do |product| %>
+          <div class="well">
+      <h4>
+
+              <div class="product-grid">
+                <div class="image">
+                    <img src= "<%= product.image %>" alt="<%= product.title %> 's image" class="img-fluid">
+                </div>
+                <div class="product-discription py-3">
+                <h4 class="text-center"><%= link_to product.title, controller: "products", action: "show", id: product._id%></h4>
+                <p class="text-center"><small><%= product.sdescription %></small></p>
+                <span class="product-price">
+                <p class="text-center d-inline">Price: <%= product.price %></p>
+                </span>
+                </div>
+                <div class="product-btn py-2 text-center">
+                <a href="#" class="btn btn-lg " role="button" aria-pressed="true">ADD TO CART</a>
+                </div>
+      </h4>
+    </div>
+     <% end %>
+     <style>
+     .well {
+      background-color: rgba(255, 255, 255, 0.2);
+     }
+     </style>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

@@ -3,6 +3,7 @@ class Product < ApplicationRecord
 	mount_uploader :previewo, PreviewoUploader
 	mount_uploader :previewt, PreviewtUploader
 	mount_uploader :previewth, PreviewthUploader
+
 	validates :description, presence: true, length: { maximum: 600 }
 	def category_enum
     # Do not select any value, or add any blank field. RailsAdmin will do it for you.
@@ -11,4 +12,6 @@ class Product < ApplicationRecord
     # { green: 0, white: 1 }
     # [ %w(Green 0), %w(White 1)]
   end
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
 end
