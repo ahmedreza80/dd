@@ -46,7 +46,7 @@ class ChargesController < ApplicationController
 	#     # puts message
 	# end
 def gupshup_sms(phone_number,order)
-	url = URI.parse("http://enterprise.smsgupshup.com/GatewayAPI/rest?msg=Thanks%20for%20placing%20your%20order%20on%20Denny%20Dots,%20We%20have%20recived%20your%20order%20,%20and%20will%20contact%20you%20shortly!%20your%20order%20Tracking%20order%20number%20is#{order}&v=1.1&userid=user_id&password=password&send_to=91#{phone_number}&msg_type=text&method=sendMessage")
+	url = URI.parse("http://enterprise.smsgupshup.com/GatewayAPI/rest?msg=Thanks%20for%20placing%20your%20order%20on%20Denny%20Dots,%20We%20have%20recived%20your%20order%20,%20and%20will%20contact%20you%20shortly!%20your%20order%20Tracking%20order%20number%20is#{order}&v=1.1&userid=2000185939&password=Gp3Mtr&send_to=91#{phone_number}&msg_type=text&method=sendMessage")
 	req = Net::HTTP::Get.new(url.to_s)
 	res = Net::HTTP.start(url.host, url.port) {|http|http.request(req)}
 	puts res.body

@@ -10,6 +10,75 @@
 <link href="/assets/tro.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
+
+<% if @order.tracking == "Order Checking" %>
+<div class="content">
+	<div class="content1">
+		<h2>Order Details</h2>
+	</div>
+	<div class="content2">
+		<%if @order.first_name and @order.last_name%>
+			<div class="content2-header1">
+				<p>Name : <span><%= @order.first_name %> <%= @order.last_name %> </span></p>
+			</div>
+		<%end%>
+		<%if @order.mobile_number %>
+		<div class="content2-header1">
+			<p>Contact Number : <span><%= @order.mobile_number%></span></p>
+		</div>
+		<%end%>
+		<%if @order.email %>		
+		<div class="content2-header1">
+			<p>Email : <span><%= @order.email%></span></p>
+		</div>
+		<%end%>
+		<%if @order.tracking %>				
+		<div class="content2-header1">
+			<p>Tracking status : <span><%= @order.tracking%></span></p>
+		</div>
+		<%end%>
+		<%if @order.created_at %>				
+		<div class="content2-header1">
+			<p>Order Placed Date : <span><%= @order.created_at%></span></p>
+		</div>
+
+		<%end%>
+		<div class="clear"></div>
+
+	</div>
+	<h2 style="text-align:center;">Order Checking in Progress</h2>
+			<p style="text-align:center;">We are checking your order and payment to make sure the payment is succesfully completed.<br> Usually it takes an hour, once the checking is complete you will be able to track your order.<br>If there is any issue you will recive a call from us.</p>
+</div>
+
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<% if @order.tracking == "Order Recived" %>
 <div class="content">
 	<div class="content1">
