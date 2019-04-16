@@ -59,6 +59,7 @@ Rails.application.routes.draw do
 
   get 'search', to: 'search#search'
   get "welcome/sofas"
+  get "welcome/newoffers"
   get "welcome/about"
   get "welcome/dining"
   get "welcome/contact"
