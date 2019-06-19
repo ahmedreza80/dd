@@ -12,6 +12,4 @@ class Product < ApplicationRecord
     # { green: 0, white: 1 }
     # [ %w(Green 0), %w(White 1)]
   end
-  include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks
 end
