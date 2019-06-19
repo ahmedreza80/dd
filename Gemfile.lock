@@ -83,18 +83,6 @@ GEM
       warden (~> 1.2.3)
     dotenv (2.2.2)
     dry-inflector (0.1.2)
-    elasticsearch (6.0.3)
-      elasticsearch-api (= 6.0.3)
-      elasticsearch-transport (= 6.0.3)
-    elasticsearch-api (6.0.3)
-      multi_json
-    elasticsearch-model (5.0.0)
-      activesupport (> 3)
-      elasticsearch (> 1)
-      hashie
-    elasticsearch-transport (6.0.3)
-      faraday
-      multi_json
     erubi (1.7.1)
     excon (0.62.0)
     execjs (2.7.0)
@@ -473,8 +461,6 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dotenv (~> 2.2.1)
-  elasticsearch (~> 6.0.1)
-  elasticsearch-model (~> 5)
   fog (~> 1.40)
   fog-aws (~> 0.7.6)
   jbuilder (~> 2.5)
@@ -503,4 +489,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.5
+   1.17.2
