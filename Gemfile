@@ -25,7 +25,7 @@ gem 'carrierwave', '~> 0.10.0'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'omniauth-google-oauth2', '~> 0.4.1'
 
-gem 'mini_magick', '~> 4.3'
+gem 'mini_magick', '~> 4.9'
 gem 'devise'
 gem 'twilio-ruby', '~> 4.0.0'
 gem 'autoprefixer-rails', '~> 6.3'
