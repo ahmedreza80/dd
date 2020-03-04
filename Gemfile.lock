@@ -325,7 +325,7 @@ GEM
     phonelib (0.6.28)
     popper_js (1.14.5)
     public_suffix (3.0.3)
-    puma (3.12.0)
+    puma (3.12.4)
     rack (2.0.6)
     rack-pjax (1.0.0)
       nokogiri (~> 1.5)
@@ -472,7 +472,7 @@ DEPENDENCIES
   omniauth-google-oauth2 (~> 0.4.1)
   pg
   phonelib
-  puma (~> 3.7)
+  puma (~> 3.12)
   rails (~> 5.1.6)
   rails_12factor
   rails_admin (~> 1.3)
