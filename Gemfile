@@ -19,7 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 
 
 gem 'bootstrap', '~> 4.1.1'
-gem 'rails_admin', '~> 1.3'
+gem 'rails_admin', '~> 1.4'
 gem 'jquery-rails'
 gem 'carrierwave', '~> 0.10.0'
 gem 'omniauth-facebook', '~> 4.0'
